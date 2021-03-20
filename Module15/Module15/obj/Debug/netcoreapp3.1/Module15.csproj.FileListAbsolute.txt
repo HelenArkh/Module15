@@ -1,0 +1,13 @@
+D:\VS_Projects\Module15\Module15\Module15\bin\Debug\netcoreapp3.1\Module15.exe
+D:\VS_Projects\Module15\Module15\Module15\bin\Debug\netcoreapp3.1\Module15.deps.json
+D:\VS_Projects\Module15\Module15\Module15\bin\Debug\netcoreapp3.1\Module15.runtimeconfig.json
+D:\VS_Projects\Module15\Module15\Module15\bin\Debug\netcoreapp3.1\Module15.runtimeconfig.dev.json
+D:\VS_Projects\Module15\Module15\Module15\bin\Debug\netcoreapp3.1\Module15.dll
+D:\VS_Projects\Module15\Module15\Module15\bin\Debug\netcoreapp3.1\Module15.pdb
+D:\VS_Projects\Module15\Module15\Module15\obj\Debug\netcoreapp3.1\Module15.csprojAssemblyReference.cache
+D:\VS_Projects\Module15\Module15\Module15\obj\Debug\netcoreapp3.1\Module15.AssemblyInfoInputs.cache
+D:\VS_Projects\Module15\Module15\Module15\obj\Debug\netcoreapp3.1\Module15.AssemblyInfo.cs
+D:\VS_Projects\Module15\Module15\Module15\obj\Debug\netcoreapp3.1\Module15.csproj.CoreCompileInputs.cache
+D:\VS_Projects\Module15\Module15\Module15\obj\Debug\netcoreapp3.1\Module15.dll
+D:\VS_Projects\Module15\Module15\Module15\obj\Debug\netcoreapp3.1\Module15.pdb
+D:\VS_Projects\Module15\Module15\Module15\obj\Debug\netcoreapp3.1\Module15.genruntimeconfig.cache
