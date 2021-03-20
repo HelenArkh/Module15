@@ -10,38 +10,37 @@ namespace Module15
         public static List<int> Numbers = new List<int>();
         static void Main(string[] args)
         {
-            while (true)
+            var cars = new List<Car>()
+{
+   new Car("Suzuki", "JP"),
+   new Car("Toyota", "JP"),
+   new Car("Opel", "DE"),
+   new Car("Kamaz", "RUS"),
+   new Car("Lada", "RUS"),
+   new Car("Honda", "JP"),
+};
+
+            var carsByCountry2 = cars
+    .GroupBy(car => car.CountryCode)
+    .Select(g => new
+    {
+        Name = g.Key,
+        Count = g.Count(),
+        Cars = g.Select(c => c)
+    });
+
+            // Выведем результат
+            foreach (var group in carsByCountry2)
             {
-                // Читаем введенный с консоли  текст
-                var input = Console.ReadLine();
+                // Название группы и количество элементов
+                Console.WriteLine($"{group.Name} : {group.Count} авто");
 
-                // проверяем, число ли это
-                var isInteger = Int32.TryParse(input, out int inputNum);
+                foreach (Car car in group.Cars)
+                    Console.WriteLine(car.Manufacturer);
 
-                // если не число - показываем ошибку
-                if (!isInteger)
-                {
-                    Console.WriteLine();
-                    Console.WriteLine("Вы ввели не число");
-                }
-                // если соответствует, запускаем обработчик
-                else
-                {
-                    // добавляем в список
-                    Numbers.Add(inputNum);
-
-                    // выводим все критерии
-                    Console.WriteLine("Число " + input + " добавлено в список.");
-                    Console.WriteLine($"Всего в списке  { Numbers.Count} чисел");
-                    Console.WriteLine($"Сумма:  {Numbers.Sum()}");
-                    Console.WriteLine($"Наибольшее:  {Numbers.Max()}");
-                    Console.WriteLine($"Наименьшее:  {Numbers.Min()}");
-                    Console.WriteLine($"Среднее:  {Numbers.Average()}");
-
-                    Console.WriteLine();
-                }
+                Console.WriteLine();
             }
-            }
+        }
 
         static int CountCommon(string word1, string word2)
         {
