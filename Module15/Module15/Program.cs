@@ -10,16 +10,22 @@ namespace Module15
         public static List<int> Numbers = new List<int>();
         static void Main(string[] args)
         {
-            //  объявляем две коллекции
-            var letters = new string[] { "A", "B", "C", "D", "E" };
-            var numbers = new int[] { 1, 2, 3 };
+            var students = new List<Student>
+{
+   new Student {Name="Андрей", Age=23 },
+   new Student {Name="Сергей", Age=27 },
+   new Student {Name="Дмитрий", Age=29 }
+};
 
-            // проводим "упаковку" элементов, сопоставляя попарно
-            var q = letters.Zip(numbers, (l, n) => l + n.ToString());
+            var youngStudents = students
+   .Where(s => s.Age < 25) // на этом этапе происходит генерация LINQ-выражения
+  .ToArray(); // А вот тут уже будет выполнение
 
-            // вывод
-            foreach (var s in q)
-                Console.WriteLine(s);
+            // Добавим нового студента уже после инициализанции LINQ-запроса
+            students.Add(new Student { Name = "Анна", Age = 21 });
+
+            foreach (var stud in youngStudents)
+                Console.WriteLine(stud.Name);
         }
     }
 }
