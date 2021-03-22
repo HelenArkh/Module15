@@ -1,15 +1,9 @@
 ﻿namespace Module15
 {
-    internal class Car
+    public class Car
     {
-        public string Manufacturer;
-        public string CountryCode;
-
-        public Car(string v1, string v2)
-        {
-            Manufacturer = v1;
-            CountryCode = v2;
-        }
+        public string Model { get; set; }
+        public string Manufacturer { get; set; }
 
     }
 }
